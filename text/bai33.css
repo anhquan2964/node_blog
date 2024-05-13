@@ -1,0 +1,92 @@
+body{
+    width: 90%;
+   
+    
+}
+.toast{
+    margin: 0 auto;
+    display: flex;
+    
+    width: 100%;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 0 40px;
+    box-shadow:0px 5px 5px rgba(0, 0, 0, 0.5);
+    border-left: 4px solid ;
+    animation: sile ease 3s , outSile linear 1s 3s forwards;
+    
+}
+@keyframes sile{
+    from{
+        transform: translateX(calc(100% + 190px));
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes outSile{
+    to{
+        opacity: 0;
+    }
+}
+#toast{
+    position: fixed;
+    right: 190px;
+    top: 50px;
+}
+.toast+.toast{
+    margin-top: 30px;
+}
+.toast--icon,
+.toast--close{
+    padding: 0 16px;
+}
+.toast--body{
+   flex-grow: 1;
+}
+.toast--title{
+
+}
+.toast--age{
+
+}
+.toast--close{
+    cursor: pointer;
+    
+}
+.toast--close:hover{
+    opacity: 0.5;
+}
+.toast--icon{
+    font-size: 24px
+}
+.toast--success{
+    border-color: blue;
+}
+.toast--error{
+    border-color: red;
+
+}
+.toast--info{
+    border-color: chartreuse;
+
+}
+.toast--warning{
+    border-color: crimson;
+
+}
+.toast--success .toast--icon{
+    color: blue;
+}
+.toast--error .toast--icon{
+    color: red;
+
+}
+.toast--info .toast--icon{
+    color: chartreuse;
+
+}
+.toast--warning .toast--icon{
+    color: crimson;
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bai3.css">
+</head>
+<body>
+   <div id="toast">
+    
+    </div>
+    
+   </div>
+   <button onclick="Success()" class="btn btn--sucscess">GO TO NEXT</button>
+    <button onclick="erro()" class="btn btn--warn">OK</button>
+      
+        <script>
+            function toast({title='',massage='',type='info',dega='3000'}){
+                const main =document.getElementById('toast');
+                if(main){
+                    const toast=document.createElement('div');
+                    const icons= {
+                        Success:'fa-solid fa-check',
+                        info:'fa-solid fa-question',
+                        warning:'fa-solid fa-exclamation',
+                        erro:'fa-solid fa-exclamation'
+                    }
+                    const icon=icons[type];
+                    const delay=(dega / 1000).toFixed(2);
+                    toast.classList.add('toast',`toast__${type}`);
+                    toast.style.animation="sile ease 1s , outSile linear 1s ${delay}s forwards"
+                    toast.innerHTML=`   
+                    <div class="toast__icon">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h3 class="toast__title">
+                            ${title}
+                        </h3>
+                        <p class="toast__mgs">
+                        ${massage}
+                        </p>
+                    </div>
+                    <div class="toast__close">
+                        
+                    </div>`;
+                    main.appendChild(toast);
+
+                    setTimeout(function(){
+                    main.removeChill(toast);
+            },dega )
+                }
+            }
+           
+            function Success(){
+                toast({
+                title:'Success',
+                massage:'  123 May vi tính đã kết nối thành công',
+                type:'Success',
+                dega:'1000'
+            });}
+            function erro(){
+                toast({
+                title:'that bai',
+                massage:'  123 that bai',
+                type:'erro',
+                dega:'3000'
+            });
+            }
+        </script>
+</body>
+</html>

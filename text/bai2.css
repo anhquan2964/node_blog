@@ -1,0 +1,32 @@
+div{
+    width: 500px;
+    display: flex;
+    margin: 0 auto;
+}
+.btn{
+    
+    padding: 12px 48px;
+    border: transparent;
+    border-radius: 50px;
+    display: flex;
+    text-decoration: none;
+    outline: none;
+    transition: opacity .5s ease;
+    
+
+}
+.btn + .btn{
+    margin-left: 20px;
+}
+.btn--sucscess{
+    background-color: bisque;
+}
+.btn--warn{
+    background-color: red;
+}
+.btn--erro{
+    background-color: aquamarine;
+}
+.btn:hover{
+    opacity:  0.5  ;
+}

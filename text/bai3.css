@@ -1,0 +1,137 @@
+
+.btn{
+    
+    padding: 12px 48px;
+    border: transparent;
+    border-radius: 50px;
+    display: flex;
+    text-decoration: none;
+    outline: none;
+    transition: opacity .5s ease;
+    
+
+}
+.btn + .btn{
+    margin-left: 20px;
+}
+.btn--sucscess{
+    background-color: bisque;
+}
+.btn--warn{
+    background-color: red;
+}
+.btn--erro{
+    background-color: aquamarine;
+}
+.btn:hover{
+    opacity:  0.5  ;
+}
+body{
+    width: 500px;
+    margin: auto;
+    
+
+}
+#toast{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+
+}
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px 0px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    
+    
+
+    
+    
+}
+@keyframes sile{
+    from{
+        opacity: .5;
+        transform: translateX(calc( 100% + 60px ));
+    }
+    to{
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+}
+@keyframes outSile{
+   
+    to{
+        opacity: 0;
+
+    }
+}
+.toast +.toast{
+    margin-top:30px;
+}
+.toast__icon{
+    font-size: 24px;
+}
+.toast__icon,
+.toast__close{
+    padding: 0 16px;
+}
+.toast__body{
+    flex-grow: 1;
+}
+.toast__title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+
+}
+.toast__mgs{
+    font-size: 20px;
+    color: #888;
+
+}
+.toast__close{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.toast__close:hover{
+    opacity: 0.8;
+}
+.toast__Success{
+    border-color: chartreuse ;
+}
+.toast__Success 
+.toast__icon{
+    color:chartreuse ;
+}
+.toast__warning {
+    border-color:aqua ;
+
+}
+.toast__Success ,
+.toast__icon{
+    color:aqua ;
+}
+
+.toast__erro{
+    border-color:blue ;
+
+}
+.toast__erro        
+.toast__icon{
+    color:blue ;
+}
+.toast__info{
+    border-color: cadetblue;
+
+}
+.toast__info 
+.toast__icon{
+    color:cadetblue ;
+}
